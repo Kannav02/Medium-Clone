@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { AppBar } from "../components/AppBar";
 import { createPostInputType } from "@kannav02/common";
 import { URL } from "../config";
@@ -15,10 +15,10 @@ export const CreateBlog = () => {
 
   //   },[])
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <div>
-      <AppBar isVisible={false}/>
+      <AppBar isVisible={false} />
       <div className="flex flex-col items-center">
         <h1 className="text-xl font-semibold mb-6">Create A Blog Post</h1>
         <textarea
@@ -69,7 +69,7 @@ export const CreateBlog = () => {
                 }
               );
               const id: string = response.data.id;
-              navigate(`/blog/${id}`)
+              navigate(`/blog/${id}`);
             }
           }}
         >
